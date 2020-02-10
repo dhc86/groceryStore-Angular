@@ -1,0 +1,24 @@
+<div class="grocery-store-container">
+    <div 
+        class="store-name">Grocery Store Angular Challenge
+    </div>
+    <div class="store-content">
+        <div class="stock-store">
+            <app-stock
+                [products]="products"
+                (addToCart)="addProductToCart($event)">
+            </app-stock>
+            <shopping-cart
+                [shoppingCart]="shoppingCart"
+                (removeFromCart)="backToStock($event)"
+                (scanInCashRegister)="checkOutItem($event)">
+            </shopping-cart>
+        </div>
+        <div class="items-selection">
+            <cash-register
+                [cashRegister]="cashRegister">
+            </cash-register>
+        </div>
+    </div>
+
+</div>

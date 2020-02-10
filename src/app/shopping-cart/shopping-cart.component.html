@@ -1,0 +1,40 @@
+<div class="cart-container">
+    <div class="label-container">Shopping Cart</div>
+    <div class="table-container">
+        <table class="fancy-table">
+            <tr class="labels">
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity on Stock</th>
+                <th>Scanned</th>
+                <th>Actions</th>
+            </tr>
+            <tr 
+                *ngFor="let product of shoppingCart.items">
+                <td>{{ product.name }}</td>
+                <td>${{ product.getUnitPrice() }} <span *ngIf="product.soldBy === 'weight'">/lb</span></td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.isScanned }}</td>
+                <td>
+                    <div>
+                        <button 
+                            *ngIf="!product.isScanned"
+                            [disabled]="product.quantity === 0"
+                            (click)="deleteFromCart(product)">Remove
+                        </button>
+                        <button 
+                            *ngIf="!product.isScanned"
+                            [disabled]="product.quantity === 0"
+                            (click)="scanItem(product)">Scan Product
+                        </button>
+                    </div>
+                    <div *ngIf="product.isScanned">Scanned</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="cart-summary">
+    Total Items: {{ shoppingCart.totalItemsCount() }} - 
+    Total Price: {{ shoppingCart.totalPrice().toFixed(3) }}$
+</div>

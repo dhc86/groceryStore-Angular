@@ -1,0 +1,44 @@
+.cash-register-container {
+    padding-left: 2rem;
+    .label-container {
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    .receipt-view {
+        background-color: white;
+        min-height: 15rem;
+        font-family: monospace;
+        padding: 1rem;
+        table {
+            width: 100%;
+            .quantity {
+                text-align: left;
+            }
+            .name {
+                text-align: center;
+            }
+            .price {
+                text-align: right;
+            }
+        }
+        p, h2 {
+            text-align: center;
+        }
+    }
+    .summary {
+        .info{
+            display: inline-flex;
+            width: 100%;
+            .label {
+                text-align: left;
+                width: 30%;
+            }
+            .value {
+                text-align: right;
+                width: 70%;
+            }
+        }
+
+    }
+}

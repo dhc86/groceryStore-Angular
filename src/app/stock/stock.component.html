@@ -1,0 +1,22 @@
+<div class="stock-container">
+    <div class="label-container">Products Available</div>
+    <table>
+        <tr class="labels">
+            <th>Name</th>
+            <th>Price ($)</th>
+            <th>Quantity on Stock</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let product of products">
+            <td>{{ product.name }}</td>
+            <td>{{ product.getUnitPrice() }} <span *ngIf="product.soldBy === 'weight'">/lb</span></td>
+            <td>{{ product.quantity }}</td>
+            <td>
+                <button 
+                    [disabled]="product.quantity === 0"
+                    (click)="addProductToCart(product)">Add to Cart
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

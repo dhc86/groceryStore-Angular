@@ -1,0 +1,52 @@
+<div class="cash-register-container">
+    <div class="label-container">Cash Register</div>
+    <div class="receipt-view">
+        <h2>Angular Store Challenge</h2>
+        <p>----------------------------------------------</p>
+        <table>
+            <tr>
+                <th>QTY</th>
+                <th>Name</th>
+                <th>Price($)</th>
+            </tr>
+            <tr 
+                *ngFor="let product of cashRegister.items">
+                <td class="quantity">{{ product.quantity }}<span *ngIf="product.soldBy === 'weight'"> - ({{product.getWeight().toFixed(3)}}/lb)</span></td>
+                <td class="name">{{ product.name }}</td>
+                <td class="price">${{ product.getTotalPrice().toFixed(3) }}</td>
+            </tr>
+        </table>
+        <p>----------------------------------------------</p>
+        <div class="summary">
+            <div class="info">
+                <div class="label">Sub Total:</div>
+                <div class="value">{{ cashRegister.subTotalPrice().toFixed(3) }}</div>
+            </div>
+            <div class="info">
+                <div class="label">Tax:</div>
+                <div class="value">{{ cashRegister.getTax() }}%</div>
+            </div>
+            <div
+                class="info"
+                *ngIf="cashRegister.subTotalPrice().toFixed(3) > 100">
+                <div class="label">Coupon:</div>
+                <div class="value"> - $5</div>
+            </div>
+            <div class="info">
+                <div class="label">Total:</div>
+                <div class="value">{{ cashRegister.totalPrice().toFixed(3) }}</div>
+            </div>
+            <div
+                class="info"
+                *ngIf="cashRegister.subTotalPrice().toFixed(3) > 100">
+                <div class="label">Total with coupon:</div>
+                <div class="value">{{ cashRegister.totalPrice().toFixed(3) - 5 }}</div>
+            </div>
+        </div>
+        <p>----------------------------------------------</p>
+        <p>$5 off when you spend $100 or more</p>
+        <p>Thank you for using the Angular Store</p>
+        <p>- BY DIEGO HERRERA C -</p>
+    </div>
+</div>
+
