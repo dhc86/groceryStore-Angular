@@ -1,0 +1,18 @@
+<p>products works!</p>
+
+<table>
+  <tr class="labels">
+      <th>Name</th>
+      <th>Price ($)</th>
+      <th>Quantity on Stock</th>
+      <th>Action</th>
+  </tr>
+  <tr *ngFor="let product of products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.getUnitPrice() }} <span *ngIf="product.soldBy === 'weight'">/lb</span></td>
+      <td>{{ product.quantity }}</td>
+      <td>
+          <button>Some Action</button>
+      </td>
+  </tr>
+</table>

@@ -9,7 +9,7 @@
                 <th>Scanned</th>
                 <th>Actions</th>
             </tr>
-            <tr 
+            <tr
                 *ngFor="let product of shoppingCart.items">
                 <td>{{ product.name }}</td>
                 <td>${{ product.getUnitPrice() }} <span *ngIf="product.soldBy === 'weight'">/lb</span></td>
@@ -17,12 +17,12 @@
                 <td>{{ product.isScanned }}</td>
                 <td>
                     <div>
-                        <button 
+                        <button
                             *ngIf="!product.isScanned"
                             [disabled]="product.quantity === 0"
                             (click)="deleteFromCart(product)">Remove
                         </button>
-                        <button 
+                        <button
                             *ngIf="!product.isScanned"
                             [disabled]="product.quantity === 0"
                             (click)="scanItem(product)">Scan Product
@@ -35,6 +35,8 @@
     </div>
 </div>
 <div class="cart-summary">
-    Total Items: {{ shoppingCart.totalItemsCount() }} - 
+    Total Items: {{ shoppingCart.totalItemsCount() }} -
     Total Price: {{ shoppingCart.totalPrice().toFixed(3) }}$
 </div>
+Message: {{ message }}
+<button (click)="updateMessage()">Say Hello!</button>

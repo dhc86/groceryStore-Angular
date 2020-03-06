@@ -1,2 +1,21 @@
-<grocery-store>
-</grocery-store>
+<ul class="navigation-links">
+  <li
+    routerLinkActive="active"
+    routerLink="/">HOME
+  </li>
+  <li
+    routerLinkActive="active"
+    routerLink="/store">STORE
+  </li>
+  <li
+    routerLinkActive="active"
+    routerLink="/employees">EMPLOYESS
+  </li>
+  <li
+    routerLinkActive="active"
+    routerLink="/products"
+    [queryParams]="{ page: 1, order: 'newest'}">STOCK
+  </li>
+</ul>
+<router-outlet>
+</router-outlet>

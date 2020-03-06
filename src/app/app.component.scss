@@ -1,4 +1,15 @@
 .app-root {
     font-size: 1rem;
-    font-family: sans-serif;    
+    font-family: sans-serif;
+}
+.navigation-links {
+  display: inline-flex;
+  list-style: none;
+  li {
+    padding: 0rem 1rem;
+    background-color: white;
+    &.active {
+      background-color: lightblue;
+    }
+  }
 }

@@ -16,12 +16,12 @@ export class ProductService {
 		{ id: '4', name: 'Cheese', price: 4.99, imageUrl: 'www.image.com/url.1', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
 		{ id: '5', name: 'Pepsi', price: 2.50, imageUrl: 'www.image.com/url.1', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
 		{ id: '6', name: 'Milk', price: 2.99, imageUrl: 'www.image.com/url.3', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
-		{ id: '1', name: 'Broccoli', price: 2.60, imageUrl: 'www.image.com/url.3', weight: 0.5, soldBy: 'weight', quantity: 10, isScanned: false },
-		{ id: '2', name: 'Mango', price: 2.49, imageUrl: 'www.image.com/url.3', weight: 0.7, soldBy: 'weight', quantity: 10, isScanned: false },
-		{ id: '3', name: 'Eggs', price: 3.50, imageUrl: 'www.image.com/url.3', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
-		{ id: '4', name: 'Coffee', price: 6.50, imageUrl: 'www.image.com/url.1', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
-		{ id: '5', name: 'Water', price: 2.50, imageUrl: 'www.image.com/url.1', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
-		{ id: '6', name: 'Sugar', price: 4.99, imageUrl: 'www.image.com/url.3', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false }
+		{ id: '7', name: 'Broccoli', price: 2.60, imageUrl: 'www.image.com/url.3', weight: 0.5, soldBy: 'weight', quantity: 10, isScanned: false },
+		{ id: '8', name: 'Mango', price: 2.49, imageUrl: 'www.image.com/url.3', weight: 0.7, soldBy: 'weight', quantity: 10, isScanned: false },
+		{ id: '9', name: 'Eggs', price: 3.50, imageUrl: 'www.image.com/url.3', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
+		{ id: '10', name: 'Coffee', price: 6.50, imageUrl: 'www.image.com/url.1', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
+		{ id: '11', name: 'Water', price: 2.50, imageUrl: 'www.image.com/url.1', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false },
+		{ id: '12', name: 'Sugar', price: 4.99, imageUrl: 'www.image.com/url.3', weight: 1, soldBy: 'unit', quantity: 10, isScanned: false }
 	];
 
 	constructor() { }

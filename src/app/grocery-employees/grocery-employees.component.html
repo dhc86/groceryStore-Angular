@@ -1,0 +1,25 @@
+<p>grocery-employees works!</p>
+
+<table>
+  <tr class="labels">
+      <th>Name</th>
+      <th>StartDate</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Department</th>
+      <th>Title</th>
+      <th>Action</th>
+  </tr>
+  <tr *ngFor="let employee of employees">
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.startDate }}</td>
+      <td>{{ employee.phone }}</td>
+      <td>{{ employee.address }}</td>
+      <td>{{ employee.department }}</td>
+      <td>{{ employee.title }}</td>
+      <td>
+          <button>Some Action</button>
+      </td>
+  </tr>
+</table>
+

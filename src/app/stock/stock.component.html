@@ -12,11 +12,15 @@
             <td>{{ product.getUnitPrice() }} <span *ngIf="product.soldBy === 'weight'">/lb</span></td>
             <td>{{ product.quantity }}</td>
             <td>
-                <button 
+                <button
                     [disabled]="product.quantity === 0"
                     (click)="addProductToCart(product)">Add to Cart
+                </button>
+                <button
+                  [routerLink]="['/products', product.name ,product.id]">View Product
                 </button>
             </td>
         </tr>
     </table>
+    {{ message }}
 </div>
